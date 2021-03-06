@@ -19,6 +19,12 @@ public class CouponController extends HttpServlet {
 
 	private CouponDAO dao = new CouponDAO();
 
+	
+	
+	
+	
+	
+	
 	public CouponController() {
 		super();
 	}
