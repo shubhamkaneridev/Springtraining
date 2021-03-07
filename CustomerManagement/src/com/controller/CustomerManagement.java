@@ -15,6 +15,8 @@ public class CustomerManagement {
 
 		CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl();
 
+		
+		
 		do {
 
 			System.out.println("   1.add \n 2.edit\n 3.list\n 4.search \n5.exit");
