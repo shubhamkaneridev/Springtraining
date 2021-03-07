@@ -36,11 +36,11 @@ public class MainApp {
 
 		System.out.println("----Updating Record with id=2");
 
-		examJDBCTemplate.update(2, "saurabh");
+		examJDBCTemplate.update(4, "saurabh");
 
 		System.out.println("----delting Record with id=1");
 
-		examJDBCTemplate.delete(1);
+		examJDBCTemplate.delete(5);
 		
 
 		System.out.println("------Listing Multiple Records--------");
