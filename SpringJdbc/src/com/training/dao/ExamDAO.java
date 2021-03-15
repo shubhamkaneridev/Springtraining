@@ -1,6 +1,6 @@
 package com.training.dao;
 
-import java.util.Date;
+
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -8,24 +8,18 @@ import javax.sql.DataSource;
 import com.training.pojo.Exam;
 
 public interface ExamDAO {
-	   
-	   public void setDataSource(DataSource ds);
 
-	   
-	   public void create(String date, boolean attendence, String studentName);
+	public void setDataSource(DataSource ds);
 
-	   
-	   public Exam getExam(Integer id);
+	public void create(String date, boolean attendence, String studentName);
 
-	   
-	   public List<Exam> listExam();
-	   
-	   
-	   
-	   
+	public Exam getExam(Integer id);
+
+	public List<Exam> listExam();
+
+	public void delete(Integer id);
+
+	public void update(Integer id, String studentName);
 	
-	   public void delete(Integer id);
-	   
 	
-	   public void update(Integer id, String studentName);
-	} 
+}

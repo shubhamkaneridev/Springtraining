@@ -25,8 +25,8 @@ public class MainApp {
 			System.out.print(", StudentName : " + record.getStudentName());
 			System.out.println(", Date : " + record.getDate());
 			System.out.println(", attendence : " + record.isAttendence());
-
 		}
+		
 		System.out.println("----Listing Record with ID = 2 -----");
 		Exam record = examJDBCTemplate.getExam(2);
 		System.out.print("ID : " + record.getId());

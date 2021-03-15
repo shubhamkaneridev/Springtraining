@@ -1,14 +1,11 @@
 package com.training.jdbcTemplate;
 
-import java.util.Date;
+
 import java.util.List;
-import java.util.Map;
 
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 
 import com.training.dao.ExamDAO;
@@ -32,28 +29,29 @@ public class ExamJDBCTemplate implements ExamDAO {
 		String SQL = "insert into Exam (DATE, ATTENDENCE,STUDENT_NAME) values (?, ?,?)";
 
 		jdbcTemplateObject.update(SQL, date, attendence, studentName);
-		System.out.println(
-				"Created Record StudentName = " + studentName + " Date = " + date + " Attendence" + attendence);
+		System.out.println("Created Record StudentName = " + studentName + " Date = " + date + " Attendence" + attendence);
+		
 		return;
 
 	}
 
 	@Override
 	public Exam getExam(Integer id) {
+		
 		String SQL = "select * from Exam where id = ?";
+		
 		Exam exam = jdbcTemplateObject.queryForObject(SQL, new Object[] { id }, new ExamMapper());
+		
 		return exam;
 
 	}
 
 	@Override
 	public List<Exam> listExam() {
-
 		JdbcTemplate jdbcTemplateObject = new JdbcTemplate(dataSource);
 		String SQL = "select * from Exam";
 		List<Exam> exam = jdbcTemplateObject.query(SQL, new ExamMapper());
 		return exam;
-
 	}
 
 	@Override

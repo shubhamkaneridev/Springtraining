@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.RowMapper;
 import com.training.pojo.Exam;
 
 public class ExamMapper implements RowMapper<Exam> {
+
 	public Exam mapRow(ResultSet rs, int rowNum) throws SQLException {
 
 		Exam exam = new Exam();
@@ -17,5 +18,7 @@ public class ExamMapper implements RowMapper<Exam> {
 		exam.setAttendence(rs.getBoolean("ATTENDENCE"));
 
 		return exam;
+		
+		
 	}
 }

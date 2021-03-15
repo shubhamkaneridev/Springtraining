@@ -24,6 +24,7 @@ public class ExamTemplate {
 	public void setExam(Exam exam) {
 		this.exam = exam;
 	}
+	
 	@Override
 	public String toString() {
 		return "ExamTemplate [id=" + id + ", student=" + student + ", exam=" + exam + "]";
