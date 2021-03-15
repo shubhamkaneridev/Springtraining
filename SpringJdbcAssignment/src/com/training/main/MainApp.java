@@ -41,11 +41,11 @@ public class MainApp {
 
 		System.out.println(" updating student and exam database");
 
-		studentJDBCTemplate.update("jhon", 25, "HSC", 2);
+		studentJDBCTemplate.update("jhon", 25, "HSC", 6);
 
 		System.out.println(" deleting student and exam database");
 
-		studentJDBCTemplate.delete(2);
+		studentJDBCTemplate.delete(3);
 
 		
 		
