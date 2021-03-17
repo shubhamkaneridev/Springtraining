@@ -54,12 +54,13 @@ public class MainApp {
 		  
 		  
 		
-		  System.out.println("------update information--------");
-		  
-		  collegeProfessionDAO.updateProfessor("RSML", 6);
-		  
-		  
-		  
+		/*
+		 * System.out.println("------update information--------");
+		 * 
+		 * collegeProfessionDAO.updateProfessor("RSML", 6);
+		 */
+		/*
+		*/
 		/*
 		 * System.out.println("------deleting information--------");
 		 * 
